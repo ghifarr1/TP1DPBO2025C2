@@ -5,32 +5,35 @@
 
 using namespace std; // menggunakan standard namespace
 
-int main(){
+int main(){ // deklaraso funsgi main
 
-    string inputCommand;
+    string inputCommand; // string untuk input command
 
-    std::list<Petshop> daftarProduk;
+    std::list<Petshop> daftarProduk; // list of objects untuk daftar product
 
+    // terminal informations
     cout << "===========================================================" << endl;
     cout << "===== WELCOME TO MIAW MIAW PETSHOP PRODUCT MANAGEMENT =====" << endl;
     cout << "===========================================================" << endl;
     cout << "Command Line: view, add, update, delete, search, Exit" << endl;
 
+    // loop utama
     do{
 
-        cin >> inputCommand;
+        cin >> inputCommand; // meminta masukkan input
 
-        if (inputCommand == "view"){
+        if (inputCommand == "view"){ // case input view
             
             cout << "Menampilkan daftar Produk" << endl;
             
-            for (auto& petshop : daftarProduk){
+            // tampilkan object dalam list
+            for (auto& petshop : daftarProduk){ 
                 
                 petshop.tampilkanProduk();
 
             }
 
-        }else if (inputCommand == "add"){
+        }else if (inputCommand == "add"){ // case input add
 
             string id, nama;
             int harga;
@@ -51,8 +54,9 @@ int main(){
 
             cout << "Produk berhasil ditambahkan!" << endl;
 
-        }else if (inputCommand == "update"){
+        }else if (inputCommand == "update"){ // case input update
             
+            // information dan meminta input dari user
             string namaCari;
             cout << "Masukkan nama produk yang ingin diupdate: ";
             cin >> namaCari;
@@ -60,6 +64,7 @@ int main(){
             auto it = daftarProduk.begin();
             bool ditemukan = false;
             
+            // Cari objek dalam list
             while (it != daftarProduk.end() && !ditemukan) {
                 if (it->cariProduk(namaCari)) {
                     cout << "Produk ditemukan!" << endl;
@@ -92,8 +97,9 @@ int main(){
                 cout << "Produk tidak ditemukan." << endl;
             }
 
-        }else if (inputCommand == "delete"){
+        }else if (inputCommand == "delete"){ // case input delete
 
+            // information dan meminta input dari user
             string namaCari;
             cout << "Masukkan nama produk yang ingin di delete: ";
             cin >> namaCari;
@@ -101,12 +107,13 @@ int main(){
             auto it = daftarProduk.begin();
             bool ditemukan = false;
             
+            // Cari objek dalam list
             while (it != daftarProduk.end() && !ditemukan) {
                 if (it->cariProduk(namaCari)) {
                     cout << "Produk ditemukan dan akan dihapus:" << endl;
                     it->tampilkanProduk();
         
-                    // Menambahkan objek ke dalam list
+                    // menghapus objek ke dalam list
                     it->hapusProduk(daftarProduk, it);
                     
                     cout << "Produk berhasil di delete!" << endl;
@@ -122,15 +129,17 @@ int main(){
             }
 
 
-        }else if (inputCommand == "search"){
+        }else if (inputCommand == "search"){ // case input search
 
             auto it = daftarProduk.begin();
             bool ditemukan = false;
 
+            // information dan meminta input dari user
             string namaCari;
             cout << "Masukkan nama produk yang ingin dicari: ";
             cin >> namaCari;
 
+            // Cari objek dalam list
             while (it != daftarProduk.end() && !ditemukan) {
                 if (it->cariProduk(namaCari)) {
                     cout << "Produk ditemukan!" << endl;
