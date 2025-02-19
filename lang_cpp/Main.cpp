@@ -14,7 +14,7 @@ int main(){
     cout << "===========================================================" << endl;
     cout << "===== WELCOME TO MIAW MIAW PETSHOP PRODUCT MANAGEMENT =====" << endl;
     cout << "===========================================================" << endl;
-    cout << "Command Line: view, add, update, delete, search" << endl;
+    cout << "Command Line: view, add, update, delete, search, Exit" << endl;
 
     do{
 
