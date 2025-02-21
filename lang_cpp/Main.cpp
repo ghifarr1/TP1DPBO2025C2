@@ -35,7 +35,7 @@ int main(){ // deklaraso funsgi main
 
         }else if (inputCommand == "add"){ // case input add
 
-            string id, nama;
+            string id, nama, ketegori;
             int harga;
 
             // Meminta input dari user
@@ -43,11 +43,13 @@ int main(){ // deklaraso funsgi main
             cin >> id;
             cout << "Masukkan Nama produk: ";
             cin >> nama;
+            cout << "Masukkan Kategori produk: ";
+            cin >> ketegori;
             cout << "Masukkan Harga produk: ";
             cin >> harga;
 
             // Membuat objek Petshop baru
-            Petshop produkBaru(id, nama, harga);
+            Petshop produkBaru(id, nama, ketegori, harga);
 
             // Menambahkan objek ke dalam list
             daftarProduk.push_back(produkBaru);
@@ -70,7 +72,7 @@ int main(){ // deklaraso funsgi main
                     cout << "Produk ditemukan!" << endl;
                     it->tampilkanProduk();
 
-                    string id, nama;
+                    string id, nama, kategori;
                     int harga;
         
                     // Meminta input dari user
@@ -78,12 +80,14 @@ int main(){ // deklaraso funsgi main
                     cin >> id;
                     cout << "Masukkan Nama produk baru: ";
                     cin >> nama;
+                    cout << "Masukkan Kategori produk baru: ";
+                    cin >> kategori;
                     cout << "Masukkan Harga produk baru: ";
                     cin >> harga;
         
         
                     // mengupdate objek dalam list
-                    it->updateProduk(id, nama, harga);
+                    it->updateProduk(id, nama, kategori, harga);
         
                     cout << "Produk berhasil diupdate!" << endl;
 

@@ -37,7 +37,7 @@ public class Main { // membuat main class
             }else if(inputCommand.equals("add")){ // case input add
 
                 // var temp
-                String id, nama; 
+                String id, nama, kategori; 
                 int harga;
 
                 // meminta masukkan user untuk add data ke list
@@ -45,10 +45,12 @@ public class Main { // membuat main class
                 id = sc.next();
                 System.out.print("Masukkan Nama Produk: ");
                 nama = sc.next();
+                System.out.print("Masukkan Kategori Produk: ");
+                kategori = sc.next(); 
                 System.out.print("Masukkan Harga Produk: ");
                 harga = sc.nextInt();
 
-                Petshop petshop = new Petshop(id, nama, harga); // instansiasi object
+                Petshop petshop = new Petshop(id, nama, kategori, harga); // instansiasi object
 
                 daftarProduk.add(petshop); // tambahkan ke dalam list
 
@@ -68,7 +70,7 @@ public class Main { // membuat main class
                     petshop.tampilkanProduk(); // tampilkan produk
 
                     // var temp untuk inputan update
-                    String idBaru, namaBaru;
+                    String idBaru, namaBaru, kategoriBaru;
                     int hargaBaru;
 
                     // meminta masukkan user untuk update data produk
@@ -76,10 +78,12 @@ public class Main { // membuat main class
                     idBaru = sc.next();
                     System.out.print("Masukkan Nama Produk Baru: ");
                     namaBaru = sc.next();
+                    System.out.print("Masukkan Kategori Produk Baru: ");
+                    kategoriBaru = sc.next();
                     System.out.print("Masukkan Harga Produk Baru: ");
                     hargaBaru = sc.nextInt();
 
-                    petshop.updateProduk(idBaru, namaBaru, hargaBaru); // panggil method update
+                    petshop.updateProduk(idBaru, namaBaru, kategoriBaru, hargaBaru); // panggil method update
 
                     System.out.println("Produk berhasil diupdate!");
 

@@ -11,6 +11,7 @@ class Petshop{
     private:
         string idProduk;
         string namaProduk;
+        string kategoriProduk;
         int hargaProduk;
 
     // deklarasi method public
@@ -21,9 +22,10 @@ class Petshop{
         };
 
         // konstruktor dengan parameter
-        Petshop(string id, string namaProduk, int hargaProduk){
+        Petshop(string id, string namaProduk, string kategoriProduk, int hargaProduk){
             this->idProduk = id;
             this->namaProduk = namaProduk;
+            this->kategoriProduk = kategoriProduk;
             this->hargaProduk = hargaProduk;
         }
 
@@ -47,6 +49,16 @@ class Petshop{
             return namaProduk;
         }
 
+        // setter untuk kategori produk
+        void setKategoriProduk(string kategoriProduk){
+            this->kategoriProduk = kategoriProduk;
+        }
+
+        // getter untuk kategori produk
+        string getKategoriProduk(){
+            return kategoriProduk;
+        }
+
         // setter untuk harga produk
         void setHargaProduk(int hargaProduk){
             this->hargaProduk = hargaProduk;
@@ -61,14 +73,16 @@ class Petshop{
         void tampilkanProduk(){
             cout << "ID: " << idProduk << endl;
             cout << "Nama Produk: " << namaProduk << endl;
+            cout << "Kategori Produk: " << kategoriProduk << endl;
             cout << "Harga Produk: " << hargaProduk << endl;
             cout << endl;
         }
 
         // method untuk mengupdate produk
-        void updateProduk(string idProdukBaru, string namaProdukBaru, int hargaProdukBaru){
+        void updateProduk(string idProdukBaru, string namaProdukBaru, string ketegoriProdukBaru, int hargaProdukBaru){
             this->idProduk = idProdukBaru;
             this->namaProduk = namaProdukBaru;
+            this->kategoriProduk = ketegoriProdukBaru;
             this->hargaProduk = hargaProdukBaru;    
         }
 
@@ -78,6 +92,7 @@ class Petshop{
             // Optional: set data ke nilai default
             idProduk = "";
             namaProduk = "";
+            kategoriProduk = "";
             hargaProduk = 0;
             
             // Hapus elemen dari container menggunakan iterator yang diterima

@@ -6,16 +6,18 @@ public class Petshop{
 
     private String idProduk; // atribut id produk
     private String namaProduk; // atribut nama produk
+    private String kategoriProduk; // atribut kategori produk
     private int hargaProduk; // atribut harga produk
 
     Petshop(){
         // konstruktor kosong
     }
 
-    Petshop(String idProduk, String namaProduk, int hargaProduk){
+    Petshop(String idProduk, String namaProduk, String kategoriProduk, int hargaProduk){
         // konstruktor langsung mengisi atribut
         this.idProduk = idProduk;
         this.namaProduk = namaProduk;
+        this.kategoriProduk = kategoriProduk;
         this.hargaProduk = hargaProduk;
     }
 
@@ -39,6 +41,16 @@ public class Petshop{
         return namaProduk;
     }
 
+    public void setKategoriProduk(String kategoriProduk){
+        // setter untuk mengisi kategori produk
+        this.kategoriProduk = kategoriProduk;
+    }
+
+    public String getKategoriProduk(){
+        // getter untuk mendapatkan kategori produk
+        return kategoriProduk;
+    }
+
     public void setHargaProduk(int hargaProduk){
         // setter untuk mengisi harga produk
         this.hargaProduk = hargaProduk;
@@ -53,14 +65,16 @@ public class Petshop{
     public void tampilkanProduk(){
         System.out.println("ID Produk: " + idProduk);
         System.out.println("Nama Produk: " + namaProduk);
+        System.out.println("Kategori Produk: " + kategoriProduk);
         System.out.println("Harga Produk: " + hargaProduk);
         System.out.println();
     }
 
     // method untuk mengupdate produk
-    public void updateProduk(String idProdukBaru ,String namaProdukBaru, int hargaProdukBaru){
+    public void updateProduk(String idProdukBaru, String namaProdukBaru, String kategoriProdukBaru, int hargaProdukBaru){
         this.idProduk = idProdukBaru;
         this.namaProduk = namaProdukBaru;
+        this.kategoriProduk = kategoriProdukBaru;
         this.hargaProduk = hargaProdukBaru;
     }
 
@@ -69,6 +83,7 @@ public class Petshop{
         // Optional: set data ke nilai default
         idProduk = null;
         namaProduk = null;
+        kategoriProduk = null;
         hargaProduk = 0;
 
         // Hapus elemen dari container menggunakan iterator yang diterima

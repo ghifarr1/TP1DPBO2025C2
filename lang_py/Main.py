@@ -34,10 +34,11 @@ def main(): # deklarasi main function
             # meminta masukkan user
             idProduk = input("Masukkan ID produk: ")
             namaProduk = input("Masukkan Nama produk: ")
+            kategoriProduk = input("Masukkan Kategori produk: ")
             hargaProduk = int(input("Masukkan harga produk: "))
 
             # tambahkan ke dalam list
-            petshop = Petshop(idProduk, namaProduk, hargaProduk)
+            petshop = Petshop(idProduk, namaProduk, kategoriProduk, hargaProduk)
             daftarProduk.append(petshop)
 
             print("Produk berhasil ditambahkan\n")
@@ -62,10 +63,11 @@ def main(): # deklarasi main function
                     # minta masukkan ke user
                     idProdukBaru = input("Masukkan ID produk baru: ")
                     namaProdukBaru = input("Masukkan Nama produk baru: ")
+                    kategoriProdukBaru = input("Masukkan Kategori produk baru: ")
                     hargaProdukBaru = int(input("Masukkan Harga produk baru: "))
 
                     # update object
-                    petshop.updateProduk(idProdukBaru, namaProdukBaru, hargaProdukBaru)
+                    petshop.updateProduk(idProdukBaru, namaProdukBaru, kategoriProdukBaru, hargaProdukBaru)
                     print("Produk berhasil diupdate\n")
                     
                     found = True  # Tandai bahwa produk telah ditemukan dan diupdate
