@@ -29,19 +29,19 @@ Atribut Khusus:
     - **Exit** -> untuk keluar dari program
 
 ## Dokumentasi Program C++
-![Phase 1](TP1/lang_cpp/Documentation/TP1_DokumCPP1.png)
-![Phase 2](TP1/lang_cpp/Documentation/TP1_DokumCPP2.png)
-![Phase 3](TP1/lang_cpp/Documentation/TP1_DokumCPP3.png)
+![Phase 1](lang_cpp/Documentation/TP1_DokumCPP1.png)
+![Phase 2](lang_cpp/Documentation/TP1_DokumCPP2.png)
+![Phase 3](lang_cpp/Documentation/TP1_DokumCPP3.png)
 
 ## Dokumentasi Program Java
-![Phase 1](TP1/lang_java/Documentation/TP1_DokumJava1.png)
-![Phase 2](TP1/lang_java/Documentation/TP1_DokumJava2.png)
-![Phase 3](TP1/lang_java/Documentation/TP1_DokumJava3.png)
+![Phase 1](lang_java/Documentation/TP1_DokumJava1.png)
+![Phase 2](lang_java/Documentation/TP1_DokumJava2.png)
+![Phase 3](lang_java/Documentation/TP1_DokumJava3.png)
 
 ## Dokumentasi Program Python
-![Phase 1](TP1/lang_py/Documentation/TP1_DokumPy1.png)
-![Phase 2](TP1/lang_py/Documentation/TP1_DokumPy2.png)
-![Phase 3](TP1/lang_py/Documentation/TP1_DokumPy3.png)
+![Phase 1](lang_py/Documentation/TP1_DokumPy1.png)
+![Phase 2](lang_py/Documentation/TP1_DokumPy2.png)
+![Phase 3](lang_py/Documentation/TP1_DokumPy3.png)
 
 ## Dokumentasi Program PHP
-![Phase 1](TP1/lang_php/Documentation/TP1_DokumPHP1.png)
+![Phase 1](lang_php/Documentation/TP1_DokumPHP1.png)
