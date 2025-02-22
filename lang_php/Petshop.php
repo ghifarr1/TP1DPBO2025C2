@@ -1,18 +1,17 @@
 <?php
 class Petshop{
-// membuat class petshop
+    private string $idProduk;
+    private string $namaProduk;
+    private string $kategoriProduk;
+    private int $hargaProduk;
+    private string $gambarProduk;
 
-    // deklarasi atribut private
-    private $idProduk;
-    private $namaProduk;
-    private $hargaProduk;
-
-    // deklarasi method public
-    public function __construct($idProduk, $namaProduk, $hargaProduk){
-        // konstruktor 
+    public function __construct($idProduk, $namaProduk, $kategoriProduk, $hargaProduk, $gambarProduk){
         $this->idProduk = $idProduk;
         $this->namaProduk = $namaProduk;
+        $this->kategoriProduk = $kategoriProduk;
         $this->hargaProduk = $hargaProduk;
+        $this->gambarProduk = $gambarProduk;
     }
 
     // setter untuk id Produk
@@ -35,6 +34,16 @@ class Petshop{
         return $this->namaProduk;
     }
 
+    // setter untuk kategori Produk
+    public function setKategoriProduk($kategoriProduk){
+        $this->kategoriProduk = $kategoriProduk;
+    }
+
+    // getter untuk kategori Produk
+    public function getKategoriProduk(){
+        return $this->kategoriProduk;
+    }
+
     // setter untuk harga Produk
     public function setHargaProduk($hargaProduk){
         $this->hargaProduk = $hargaProduk;
@@ -45,42 +54,24 @@ class Petshop{
         return $this->hargaProduk;
     }
 
-    // method untuk menampilkan detail produk
-    public function tampilkanProduk(){
-        echo "ID Produk: ".$this->idProduk."<br>";
-        echo "Nama Produk: ".$this->namaProduk."<br>";
-        echo "Harga Produk: ".$this->hargaProduk."<br>";
-        echo "<hr>";
+    // setter untuk gambar Produk
+    public function setGambarProduk($gambarProduk){
+        $this->gambarProduk = $gambarProduk;
     }
 
-    // method untuk mengupdate produk
-    public function updateProduk($idProdukBaru, $namaProdukBaru, $hargaProdukBaru){
-        $this->idProduk = $idProdukBaru;
-        $this->namaProduk = $namaProdukBaru;
-        $this->hargaProduk = $hargaProdukBaru;
+    // getter untuk gambar Produk
+    public function getGambarProduk(){
+        return $this->gambarProduk;
     }
 
-    // method untuk menghapus produk
-    public function hapusProduk(&$daftarProduk, $namaProduk) {
-        $daftarProduk = array_filter($daftarProduk, function ($produk) use ($namaProduk) {
-            return $produk->idProduk !== $namaProduk;
-        });
-        
-        // Reset indeks array agar tetap rapi
-        $daftarProduk = array_values($daftarProduk);
+    public function toArray(){
+        return [
+            'idProduk' => $this->idProduk,
+            'namaProduk' => $this->namaProduk,
+            'kategoriProduk' => $this->kategoriProduk,
+            'hargaProduk' => $this->hargaProduk,
+            'gambarProduk' => $this->gambarProduk
+        ];
     }
-
-    // method untuk mencari produk berdasarkan nama
-    public function cariProduk($namaProduk){
-        if($this->namaProduk == $namaProduk){
-            return true;
-        }
-        return false;
-    }
-
-    function __destruct(){
-        // destruktor
-    }
-
 }
 ?>
